@@ -18,7 +18,7 @@ app.use("/api/users"  , userRoute);
 app.use("/api/posts" , postRoute);
 app.use("/api/test"  , testRoute)
 
-app.get("/"  , (req , res  ,next)=>{return res.status(200).json({
+app.get("/hello"  , (req , res  ,next)=>{return res.status(200).json({
     success : true,
     messgage : "HELLO WORLD"
 })})
