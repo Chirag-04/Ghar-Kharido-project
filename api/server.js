@@ -17,6 +17,14 @@ app.use("/api/auth" , authRoute);
 app.use("/api/users"  , userRoute);
 app.use("/api/posts" , postRoute);
 app.use("/api/test"  , testRoute)
+
+app.get("/"  , (req , res  ,next)=>{return res.status(200).json({
+    success : true,
+    messgage : "HELLO WORLD"
+})})
+
+
+
 app.listen(8800 , ()=>{
     console.log(`Server is running on PORT: 8800!`);
 })
